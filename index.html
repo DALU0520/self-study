@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>第7章：函数补充知识</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin: 20px 0;
+      font-size: 24px;
+    }
+    .chapter-desc {
+      text-align: center;
+      color: #7f8c8d;
+      margin-bottom: 24px;
+      font-style: italic;
+      font-size: 16px;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      margin: 12px 0;
+    }
+    a.lesson-link {
+      display: block;
+      padding: 14px 20px;
+      background: white;
+      border-left: 4px solid #3498db;
+      text-decoration: none;
+      color: #2c3e50;
+      border-radius: 0 6px 6px 0;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    a.lesson-link:hover {
+      background-color: #eaf7ff;
+      transform: translateX(4px);
+    }
+    a.lesson-link.completed {
+      border-left-color: #2ecc71;
+    }
+    a.lesson-link.completed::after {
+      content: " ✅";
+      color: #27ae60;
+      float: right;
+    }
+    a.back-home {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #95a5a6;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    a.back-home:hover {
+      background-color: #ecf0f1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>第7章：函数补充知识</h1>
+  <div class="chapter-desc">掌握零点、解题思维与综合复习</div>
+  <ul>
+    <li><a href="lesson-01.html" class="lesson-link">1. 函数的零点</a></li>
+    <li><a href="lesson-02.html" class="lesson-link">2. 函数的解题思路</a></li>
+    <li><a href="lesson-03.html" class="lesson-link">3. 函数复习</a></li>
+  </ul>
+  <a href="../index.html" class="back-home">← 返回课程主页</a>
+
+  <script>
+    try {
+      const progress = JSON.parse(localStorage.getItem('math_progress_v7') || '{}');
+      document.querySelectorAll('.lesson-link').forEach((link, index) => {
+        const key = `07-${String(index + 1).padStart(2, '0')}`;
+        if (progress[key]) {
+          link.classList.add('completed');
+        }
+      });
+    } catch (e) {
+      console.warn('无法读取学习进度:', e);
+    }
+  </script>
+</body>
+</html>
